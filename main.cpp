@@ -51,5 +51,20 @@ int main()
         cout << item.first << " " << item.second << endl;
     }
 
+    // Create an integer variable to store the highest count
+    int max = 0;
+
+    // Loop through the map once and get the highest count
+    for (auto item : airportTrafficCount)
+    {
+        // Update the count
+        if (item.second > max)
+        {
+            max = item.second;
+        }
+    }
+
+    // Loop through the map once again and display all the airports with the highest count
+
     return 0;
 }
