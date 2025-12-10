@@ -20,7 +20,6 @@ int main()
     fin.open(DATA_FILE);
 
     string s;
-
     while (fin >> s)
     {
         if (airportTrafficCount.find(s) != airportTrafficCount.end())
