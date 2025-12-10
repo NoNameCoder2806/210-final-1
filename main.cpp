@@ -51,6 +51,9 @@ int main()
         cout << item.first << " " << item.second << endl;
     }
 
+    // Enter a new line
+    cout << endl;
+
     // Create an integer variable to store the highest count
     int max = 0;
 
@@ -64,7 +67,19 @@ int main()
         }
     }
 
+    // Display a message
+    cout << "Busiest airport(s) with count " << max << ":" << endl;
+
     // Loop through the map once again and display all the airports with the highest count
+    for (auto item : airportTrafficCount)
+    {
+        // Compare the count
+        if (item.second == max)
+        {
+            // Display the airport and the count
+            cout << item.first << " " << item.second << endl;
+        }
+    }
 
     return 0;
 }
