@@ -36,11 +36,20 @@ int main()
         // Otherwise, the key doesn't exist
         else
         {
-            // We insert the key into the map
-            airportTrafficCount.insert(makepair<s, 0>);
+            // We insert the key into the map and make the count = 1
+            airportTrafficCount.insert(make_pair(s, 1));
         }
     }
 
+    // Display a header
+    cout << "All airport traffic counts:" << endl;
+
+    // Display all airports and the counts
+    for (auto item : airportTrafficCount)
+    {
+        // Display the airport and the count
+        cout << item.first << " " << item.second << endl;
+    }
 
     return 0;
 }
