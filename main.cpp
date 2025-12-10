@@ -11,6 +11,9 @@ using namespace std;
 // Constants
 const string DATA_FILE = "210-final-1-FA25.txt";
 
+// Functions
+void displayRange(const map<string, int>& m, int low, int high);
+
 // Main function
 int main()
 {
@@ -81,5 +84,34 @@ int main()
         }
     }
 
+    // Create a low and high variable for the range
+    int low = 0;
+    int high = 0;
+
     return 0;
+}
+
+// Function implementations
+/*
+    displayRange()
+    Display the airports whose traffic counts fall within a specified inclusive range [low, high]
+    Arguments:
+        - airport: the map that stores the airport code and the counts
+        - low: the lower / smaller number of the range
+        - high: the upper / larger number of the range
+*/
+void displayRange(const map<string, int>& airport, int low, int high)
+{
+    // Display a message
+    cout << "Airports with traffic in range [" << low << 
+    // Loop through the  map
+    for (auto item : airport)
+    {
+        // Check whether the count falls within the range
+        if (item.second >= low && item.second <= high)
+        {
+            // Display the airport and the count
+            cout << item.first << " " << item.second << endl;
+        }
+    }
 }
